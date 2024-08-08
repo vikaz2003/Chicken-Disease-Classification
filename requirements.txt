@@ -20,4 +20,5 @@ six
 ensure
 setuptools
 python-box
--e .
+tensorflow
+# -e .

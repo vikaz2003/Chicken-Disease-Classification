@@ -17,5 +17,7 @@ dill
 flask_monitoringdashboard
 mlflow
 six
-
+ensure
+setuptools
+python-box
 -e .

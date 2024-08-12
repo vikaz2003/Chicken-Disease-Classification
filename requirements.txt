@@ -21,4 +21,5 @@ ensure
 setuptools
 python-box
 tensorflow
+dvc
 # -e .

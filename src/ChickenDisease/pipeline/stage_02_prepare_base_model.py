@@ -1,6 +1,6 @@
 from ChickenDisease.config.configuration import ConfigurationManager
 from ChickenDisease.components.prepare_base_model import PrepareBaseModel
-from src.ChickenDisease import logger
+from ChickenDisease import logger
 
 
 STAGE_NAME = "Prepare base model"

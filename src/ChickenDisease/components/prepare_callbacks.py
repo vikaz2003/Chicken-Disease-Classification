@@ -5,12 +5,11 @@ import tensorflow as tf
 import time
 from ChickenDisease.entity.config_entity import PrepareCallbacksConfig
 
+
 class PrepareCallback:
-    def __init__(self, config: PrepareCallbacksConfig):
+    def __init__(self, config:PrepareCallbacksConfig):
         self.config = config
 
-
-    
     @property
     def _create_tb_callbacks(self):
         timestamp = time.strftime("%Y-%m-%d-%H-%M-%S")
@@ -19,15 +18,15 @@ class PrepareCallback:
             f"tb_logs_at_{timestamp}",
         )
         return tf.keras.callbacks.TensorBoard(log_dir=tb_running_log_dir)
-    
 
     @property
     def _create_ckpt_callbacks(self):
+        # Ensure the filepath is a string
+        filepath = str(self.config.checkpoint_model_filepath)
         return tf.keras.callbacks.ModelCheckpoint(
-            filepath=self.config.checkpoint_model_filepath,
+            filepath=filepath,
             save_best_only=True
         )
-
 
     def get_tb_ckpt_callbacks(self):
         return [

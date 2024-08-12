@@ -11,3 +11,9 @@
 7. update the piepline
 8. update the main.py
 9. update the dvc.yaml
+
+
+## Create ECR repo to store docker image
+992382603077.dkr.ecr.us-east-1.amazonaws.com/vikas3
+
+
